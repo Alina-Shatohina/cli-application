@@ -1,11 +1,12 @@
-Крок 1
+# Крок 1
 Ініціалізується npm в проекті
 В корені проекту створи файл index.js
 Постав пакет nodemon як залежність nodemon як залежність розробки (devDependencies)
 В файлі package.json додай "скрипти" для запуску index.js
 Скрипт start який запускає index.js за допомогою node
 Скрипт dev який запускає index.js за допомогою nodemon
-Крок 2
+
+# Крок 2
 У корені проекту створи папку db. Для зберігання контактів завантаж і використовуй файл contacts.json, поклавши його в папку db.
 
 У корені проекту створи файл contacts.js.
@@ -36,10 +37,11 @@ function removeContact(contactId) {
 function addContact(name, email, phone) {
   // ...твій код
 }
-Крок 3
+
+# Крок 3
 Зроби імпорт модуля contacts.js в файлі index.js та перевір працездатність функції для роботи з контактами.
 
-Крок 4
+# Крок 4
 В файлі index.js імпортується пакет yargs для зручного парса аргументів командного рядка. Використовуй готову функцію invokeAction() яка отримує тип виконуваної дії і необхідні аргументи. Функція викликає відповідний метод з файлу contacts.js передаючи йому необхідні аргументи.
 
 // index.js
@@ -110,16 +112,16 @@ function invokeAction({ action, id, name, email, phone }) {
 }
 
 invokeAction(argv);
-Крок 5
+# Крок 5
 
-# Отримуємо і виводимо весь список контактів у вигляді таблиці (console.table)
+Отримуємо і виводимо весь список контактів у вигляді таблиці (console.table)
 node index.js --action="list" - https://monosnap.com/file/z0aFVZT7cAW92VzH5mMkOtgXlFzeB8
 
-# Отримуємо контакт по id
+Отримуємо контакт по id
 node index.js --action="get" --id 05olLMgyVQdWRwgKfg5J6 - https://monosnap.com/file/kYQINXqPudzG4zqBcm42pGgo89oSHR
 
-# Додаємо контакт
+Додаємо контакт
 node index.js --action="add" --name Mango --email mango@gmail.com --phone 322-22-22 - https://monosnap.com/file/WJ49DIUsgorUjKsj80Q6v3nnsSj0h1
 
-# Видаляємо контакт
+Видаляємо контакт
 node index.js --action="remove" --id qdggE76Jtbfd9eWJHrssH - https://monosnap.com/file/yrPb9yb3phA0FSrbNgqs3R8niW3Gou
